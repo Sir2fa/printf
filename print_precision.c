@@ -34,6 +34,6 @@ break;
 else
 break;
 }
-*a = curr_a -1;
+*a = curr_a - 1;
 return (precision);
 }

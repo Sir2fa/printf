@@ -31,6 +31,6 @@ break;
 else
 break;
 }
-*aaa = curr_aaa -1;
+*aaa = curr_aaa - 1;
 return (width);
 }

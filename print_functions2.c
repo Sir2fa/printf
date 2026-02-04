@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int print_pointer(va_list types, char buffer[], int flags, int width, int 
+int print_pointer(va_list types, char buffer[], int flags, int width, int
 precision, int size)
 {
 	char extra_c = 0, padd = ' ';
@@ -24,7 +24,7 @@ precision, int size)
 	UNUSED(size);
 
 	if (addrs == NULL)
-		return (write (1, "(nil)", 5));
+		return (write(1, "(nil)", 5));
 
 	buffer[BUFF_SIZE - 1] = '\0';
 	UNUSED(precision);
@@ -75,12 +75,12 @@ int precision, int size)
 	UNUSED(size);
 
 	if (str == NULL)
-		return(write(1, "(null)", 6));
+		return (write(1, "(null)", 6));
 
 	while (str[x] != '\0')
 	{
 		if (is_printable(str[x]))
-			buffer [x + offset] = str[x];
+			buffer[x + offset] = str[x];
 		else
 			offset += append_hexa_code(str[x], buffer, 1 + offset);
 
@@ -127,7 +127,7 @@ precision, int size)
 	for (x = 0; str[x]; x++)
 		;
 
-	for (x = x -1; x >= 0; x--)
+	for (x = x - 1; x >= 0; x--)
 	{
 		char z = str[x];
 

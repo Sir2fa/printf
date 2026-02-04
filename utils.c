@@ -62,7 +62,7 @@ if (size == S_LONG)
 return (number);
 else if (size == S_SHORT)
 return ((short)number);
-return((int)number);
+return ((int)number);
 }
 
 /**

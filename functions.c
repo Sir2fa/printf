@@ -117,11 +117,11 @@ int print_int(va_list types, char buffer[],
 	unsigned long int num;
 
 	n = convert_size_number(n, size);
-	
+
 	if (n == 0)
 		buffer[i--] = '0';
 
-	buffer[BUFF_SIZE -1] = '\0';
+	buffer[BUFF_SIZE - 1] = '\0';
 	num = (unsigned long int)n;
 
 	if (n < 0)
@@ -145,7 +145,7 @@ int print_int(va_list types, char buffer[],
 /**
  * print_binary - Prints an unsigned numb
  * @types: List of args
- * buffer: Buffer array to handle print
+ * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
  * @width: Width
  * @precision: Precision specifier

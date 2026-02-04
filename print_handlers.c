@@ -15,7 +15,7 @@
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 { /* char is stored at the left and paddind at the buffer's right */
- 	int i = 0;
+	int i = 0;
 	char padd = ' ';
 
 	UNUSED(precision);
@@ -109,7 +109,7 @@ int write_num(int ind, char buffer[],
 		length++;
 	if (width > length)
 	{
-		for (i =1; i < width - length + 1; i++)
+		for (i = 1; i < width - length + 1; i++)
 			buffer[i] = padd;
 		buffer[i] = '\0';
 		if (flags & F_MINUS && padd == ' ')/* assign extra char to left of buffer */
@@ -182,7 +182,7 @@ int write_unsgnd(int is_negative, int ind,
 
 		buffer[i] = '\0';
 
-		if (flags & F_MINUS) /* Assign extra char to left of the buffer [buffer>padd] */
+		if (flags & F_MINUS) /* Assign extra char to left of buffer [buffer>padd]*/
 	{
 			return (write(1, &buffer[ind], length) + write(1, &buffer[0], i));
 	}
